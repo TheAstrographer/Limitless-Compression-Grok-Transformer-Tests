@@ -69,7 +69,7 @@ class LowCadenceVMM:
 
 
 # ============================================================
-# 1. PURE TRANSFORMER STACK (no BitPerfectFilter)
+# 1. PURE TRANSFORMER STACK
 # ============================================================
 def zeros_matrix(rows, cols):
     return [[0.0 for _ in range(cols)] for _ in range(rows)]
@@ -256,7 +256,7 @@ class TransformerStack:
 
 
 # ============================================================
-# 2. STACCATO + TRANSFORMER PIPELINE (no BitPerfectFilter)
+# 2. STACCATO + TRANSFORMER PIPELINE
 # ============================================================
 class StaccatoTransformerPipeline:
     def __init__(self, 
