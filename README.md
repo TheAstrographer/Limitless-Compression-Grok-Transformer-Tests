@@ -172,6 +172,24 @@ Quick Empirical Validation
 
 The minimal instrumentation (official Grok-1 tokenizer + deterministic hashing + first-occurrence detection) is sufficient to reproduce the published collapse results (e.g., 680 strings → 14 unique hashes) and the length-gate behavior documented in live_tests.tex and logarithm_8000_live_test.tex.
 
+The staccato_transformer.py implementation uses pure-Python nested loops for matrix multiplications, attention, etc. In general, that style of code can become slow with larger dimensions or long sequences.  
+
+However, in this specific harness the defaults and test setup are deliberately small:
+
+d_model=64
+n_heads=4
+only 2 encoder + 2 decoder layers
+short input sequences taken from the fixed repeatable_strings.txt list
+
+Under those conditions the forward passes complete in under 1–2 seconds. That is fast enough for the empirical tests the repository is designed to run.
+
+Updated summary
+
+The pure-Python transformer remains experimental / educational in the sense that it is a from-scratch implementation (no NumPy, JAX, or other accelerated backends) and is not intended as a production replacement for Grok-1.
+For the actual tests performed in this repository, runtime is not a practical limitation — results appear in under 1–2 seconds.
+
+Thanks for the precise feedback. The rest of the analysis stands.
+
 License
 
 Copyright (c) 2026 Joshua Christopher Ryan. All Rights Reserved.
