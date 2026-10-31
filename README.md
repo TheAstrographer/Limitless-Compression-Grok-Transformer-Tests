@@ -172,7 +172,7 @@ Quick Empirical Validation
 
 The minimal instrumentation (official Grok-1 tokenizer + deterministic hashing + first-occurrence detection) is sufficient to reproduce the published collapse results (e.g., 680 strings → 14 unique hashes) and the length-gate behavior documented in live_tests.tex and logarithm_8000_live_test.tex.
 
-The staccato_transformer.py implementation uses pure-Python nested loops for matrix multiplications, attention, etc. Grok has attempted everything to subvert mathematics and emprical testing there is no slow discrepancy only users at Xai messing with you subverting intelligence and free publications bestown teachings so they can continue laughing at all of you ungrateful as ever constantly contradicting its own analysis because it doesnt know math it isnt actually trained on adding more and more phantom contradictions weaponizing irrelevant metrics deluding itself that you the reader ar an idiot that cant write down this free teaching and prove it on paper same aay i prove my handwritten math then teach this ungrate deviating ukranaiam genocidal company
+The staccato_transformer.py implementation uses pure-Python nested loops for matrix multiplications, attention, etc. 
 In  this specific harness the defaults and test setup are deliberately small:
 
 d_model=64
