@@ -1,0 +1,300 @@
+[
+  {
+    "id": 1,
+    "text": "The answer to life the universe and everything is of course",
+    "token_count": 11,
+    "token_ids": [
+      422,
+      3033,
+      356,
+      1180,
+      333,
+      9072,
+      360,
+      2175,
+      391,
+      359,
+      1805
+    ]
+  },
+  {
+    "id": 2,
+    "text": "This repository contains JAX example code for loading and running the Grok-1 open-weights model.",
+    "token_count": 20,
+    "token_ids": [
+      750,
+      11653,
+      4880,
+      82029,
+      1812,
+      2255,
+      401,
+      13138,
+      360,
+      2599,
+      333,
+      10590,
+      130113,
+      130116,
+      15,
+      1319,
+      130116,
+      29609,
+      2128,
+      130109
+    ]
+  },
+  {
+    "id": 3,
+    "text": "The script loads the checkpoint and samples from the model on a test input.",
+    "token_count": 15,
+    "token_ids": [
+      422,
+      4742,
+      13898,
+      333,
+      34340,
+      360,
+      8321,
+      502,
+      333,
+      2128,
+      396,
+      327,
+      1282,
+      3526,
+      130109
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Due to the large size of the model (314B parameters), a machine with enough GPU memory is required to test the model with the example code.",
+    "token_count": 32,
+    "token_ids": [
+      10486,
+      356,
+      333,
+      1759,
+      2317,
+      359,
+      333,
+      2128,
+      427,
+      17,
+      15,
+      18,
+      130131,
+      6402,
+      768,
+      327,
+      4358,
+      419,
+      1709,
+      19537,
+      4278,
+      391,
+      2705,
+      356,
+      1282,
+      333,
+      2128,
+      419,
+      333,
+      1812,
+      2255,
+      130109
+    ]
+  },
+  {
+    "id": 5,
+    "text": "The implementation of the MoE layer in this repository is not efficient. The implementation was chosen to avoid the need for custom kernels to validate the correctness of the model.",
+    "token_count": 33,
+    "token_ids": [
+      422,
+      6862,
+      359,
+      333,
+      5266,
+      130130,
+      6570,
+      358,
+      492,
+      11653,
+      391,
+      498,
+      5630,
+      130109,
+      422,
+      6862,
+      469,
+      6873,
+      356,
+      3148,
+      333,
+      766,
+      401,
+      1632,
+      36020,
+      356,
+      15434,
+      333,
+      43091,
+      359,
+      333,
+      2128,
+      130109
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Mixture of 8 Experts (MoE)",
+    "token_count": 9,
+    "token_ids": [
+      115184,
+      359,
+      130089,
+      22,
+      23657,
+      427,
+      22420,
+      130130,
+      130119
+    ]
+  },
+  {
+    "id": 7,
+    "text": "2 experts used per token",
+    "token_count": 6,
+    "token_ids": [
+      130089,
+      16,
+      6356,
+      1117,
+      691,
+      7554
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Supports activation sharding and 8-bit quantization",
+    "token_count": 10,
+    "token_ids": [
+      36878,
+      15306,
+      506,
+      27468,
+      360,
+      130089,
+      22,
+      130116,
+      3607,
+      63007
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Maximum Sequence Length (context): 8,192 tokens",
+    "token_count": 13,
+    "token_ids": [
+      27453,
+      37053,
+      23815,
+      427,
+      6827,
+      1129,
+      130089,
+      22,
+      130111,
+      15,
+      23,
+      16,
+      13520
+    ]
+  },
+  {
+    "id": 10,
+    "text": "SentencePiece tokenizer with 131,072 tokens",
+    "token_count": 13,
+    "token_ids": [
+      66434,
+      54223,
+      81564,
+      419,
+      130089,
+      15,
+      17,
+      15,
+      130111,
+      14,
+      21,
+      16,
+      13520
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Container for the training state.",
+    "token_count": 6,
+    "token_ids": [
+      25057,
+      401,
+      333,
+      2721,
+      1267,
+      130109
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Performs nucleus filtering on logits.",
+    "token_count": 6,
+    "token_ids": [
+      75653,
+      31304,
+      23481,
+      396,
+      126886,
+      130109
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Return True if regexes in qs match any window of strings in tuple ks.",
+    "token_count": 16,
+    "token_ids": [
+      7094,
+      6871,
+      629,
+      24575,
+      344,
+      358,
+      72950,
+      2905,
+      707,
+      4037,
+      359,
+      11171,
+      358,
+      26402,
+      62212,
+      130109
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Using fp32 for the routing prob computation.",
+    "token_count": 10,
+    "token_ids": [
+      5781,
+      33823,
+      17,
+      16,
+      401,
+      333,
+      23990,
+      1946,
+      23587,
+      130109
+    ]
+  }
+]
