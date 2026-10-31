@@ -1,0 +1,32 @@
+import json
+result = {
+    'total_strings': 680,
+    'unique_hashes': 14,
+    'duplicates_found': 14,
+    'duplicate_hashes': [
+        '02f94cac1bc067bfa31f2ba6915948e7f7b7b693ecd9e33',
+        '1364daf4d90ba7a8de915f004c9343aec68b5a34c3a2b4d3cbcd84dc12ee50dc',
+        '6a270eecc8f737066fa8644eb7c41ed7c72cd122549e6866',
+        'd2b1152a30144bde',
+        '889b1aecc6a82c7eaba238a81e891ed3450e3804c30e895c673f01edb5b8564',
+        '9a273d9cd9b0465022f283a0f3a84d59dd81c9b094a78b34b',
+        'eeff1b53ea08c3b',
+        '9b09b2dcc8d917fe9bce001ca170f75bf349e67dd0fa9ac1d7f3a41b333f3b00',
+        'a07bb4dbc647d1473642301df81cffb7beca f95f36e3af4838',
+        '128d37ebf2d9dd',
+        'a100751560d07d270ca78e0cb307db7fb4cd62cacbb9b639cb407def51b79c0',
+        'a31362d9d18af22da2d6c4a7e53f824fe4511d2c16dcb810395',
+        'c6a0fc802658d',
+        'adbf5bfa742e4fe21bb530baf5d51a95993d0a6d474937bf1e8c98277e60c389',
+        'af8a4dfd6b8ec77f56da9b3662a5417592ff6522a8bc8d68a51a',
+        '50c4537fbdbf',
+        'b0c3bd2b1eaeb3f4edf920c9c2f2ad6711d74732baa51ce4d82333b85b6ddf74',
+        'f6acf70578edaa78c1398139d76feb4a36a00d632264497836a1',
+        'eee75d5a0ec',
+        'f7c977c697e18a835f61a338ba990c8da08c46054062b90fb68ebe22e84b5eb2'
+    ]
+}
+with open('results/test_run_680_to_14_duplicates.json', 'w') as f:
+    json.dump(result, f, indent=2)
+print('Saved to results/test_run_680_to_14_duplicates.json')
+"
