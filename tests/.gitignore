@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+.env
+.python-version
+
+# Model / checkpoint related (Grok-1)
+checkpoints/
+ckpt-0/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.msgpack
+*.npz
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data / logs
+*.log
+logs/
+
+tmp/
