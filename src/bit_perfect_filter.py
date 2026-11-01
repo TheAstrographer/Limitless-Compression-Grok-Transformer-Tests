@@ -19,27 +19,32 @@ class BitPerfectFilter:
             return ""
         if len(text) > self.max_length:
             return self.GROUP_SEP
+
         cleaned = self.marker_pattern.sub(self.UNIT_SEP, text)
-        cleaned = re.sub(r'[\s]+', ' ', cleaned).strip()
-        units = re.split(r'([{};\n])', cleaned)
+        cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+        units = re.split(r'[{};\n]', cleaned)
         cleaned_units = [u.strip() for u in units if u.strip()]
         collapsed = self.UNIT_SEP.join(cleaned_units)
         unit_count = collapsed.count(self.UNIT_SEP)
+
         if unit_count >= self.max_units or len(collapsed) > self.max_length:
             return self.GROUP_SEP
         if unit_count >= 2:
             return self.GROUP_SEP + collapsed + self.GROUP_SEP
         return collapsed
 
-    def filter_message(self, text: str, session_id: str = "default"):
+    def filter_message(self, text: str, session_id: str = "default") -> dict:
         original = text
         collapsed = self._collapse_blocks(text)
         block_hash = hashlib.sha256(collapsed.encode('utf-8', errors='ignore')).hexdigest()[:32]
+
         counter = self.session_counters[session_id]
         counter[block_hash] += 1
         is_first = counter[block_hash] == 1
+
         if is_first:
             self.CACHE_4[block_hash] = original
+
         return {
             "block_hash": block_hash,
             "original_len": len(original),
